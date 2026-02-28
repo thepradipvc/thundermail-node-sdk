@@ -2,10 +2,10 @@ import { Emails } from "./emails/emails";
 import { isThunderMailErrorResponse } from "./error";
 import { ErrorResponse, GetOptions, PostOptions } from "./interfaces";
 
-const defaultBaseUrl = "https://thundermail.vercel.app/api/v1";
+const defaultBaseUrl = "https://thundermail.thepradipvc.com/api/v1";
 const baseUrl =
   typeof process !== "undefined" && process.env
-    ? process.env.RESEND_BASE_URL || defaultBaseUrl
+    ? process.env.THUNDERMAIL_BASE_URL || defaultBaseUrl
     : defaultBaseUrl;
 
 export class ThunderMail {
@@ -15,7 +15,7 @@ export class ThunderMail {
   constructor(private readonly key?: string) {
     if (!key) {
       if (typeof process !== "undefined" && process.env) {
-        this.key = process.env.RESEND_API_KEY;
+        this.key = process.env.THUNDERMAIL_API_KEY;
       }
 
       if (!this.key) {
