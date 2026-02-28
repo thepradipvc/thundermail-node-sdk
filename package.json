@@ -1,6 +1,6 @@
 {
   "name": "thundermail",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Node.js library for the Thunder Mail API",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
